@@ -34,5 +34,6 @@ class FirebaseCRUD {
   // สร้างฟังก์ชันสำหรับลบข้อมูล
   deleteUser() async {
     QuerySnapshot querySnapshot = await collectionReference.get();
+    querySnapshot.docs[0].reference.delete();
   }
 }
